@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+
+i, button {
+    cursor: pointer;
+    display: block;
+}
+
+body{
+    margin: 0;
+    font-family: 'Oxygen', sans-serif;
+    background:rgb(0, 0, 0);
+    color: white;
+}
+
+.nav-w{
+    position: fixed;
+    width: 100%;
+    padding: 2rem 0;
+    background: black;
+    display: flex;
+    top: 0;
+    right: 0; 
+    justify-content: flex-end;
+}
+nav p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-180%);
+}
+
+nav i, a{
+    margin-right: 3rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+nav i {
+    margin-left: -3rem;
+}

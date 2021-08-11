@@ -1,0 +1,168 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    margin: 2rem 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 3rem;
+}
+.container{
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background: rgb(182, 9, 9);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 0.5em 1.25em;
+    border-radius: 0.35em;
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.item .btn {
+    background: rgb(182, 9, 9);
+}
+
+.btn:hover,
+.btn:focus{
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.primary-title{
+    font-size: 4rem;
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-title{
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+    padding: 2rem;
+}
+
+.product-title{
+    font-size: clamp(1rem, calc(5vw + 0.1rem), 2rem);
+    text-align: center;
+}
+
+.hero{
+    text-align: center;
+    padding: 15em 0;
+    color: rgb(255, 255, 255);
+    background-image: 
+        url('/images/burger-hero.jpg'), 
+        linear-gradient(#777, #222);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.split{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.featured-item img {
+    width: 18rem;
+}
+
+.item img {
+    max-height: 300px;
+    max-width: 300px;
+    margin: -6rem 0 0 0;
+}
+.featured{
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+.featured .featured-item{
+    position: relative;
+    transform: scale(.85);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    transition: transform 250ms ease-in-out;
+}
+.featured-details{
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+.price{
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.featured .featured-item:hover,
+.featured .featured-item:focus{
+    transform: scale(1);
+}
+
+.featured .featured-item:hover .featured-details,
+.featured .featured-item:focus .featured-details{
+    opacity: 1;
+}
+
+.item {
+    background: radial-gradient(rgb(0, 0, 0), rgb(41, 41, 41));
+    border-radius: 0.5rem;
+    padding: 3em;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 667px){
+    .item img{
+        float: right;
+        width: 50%;
+    }
+    .item img{
+        float: right;
+        width: 50%;
+    }
+    .item {
+        text-align: left;
+        width: 100%;
+    }
+    .product-title{
+        text-align: left;
+    }
+}

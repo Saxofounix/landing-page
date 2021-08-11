@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+
+.menu-desc button{
+    display: inline;
+}
+.menu-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    margin: 5rem 2rem;
+}
+
+.menu-item{
+    display: flex;
+    flex: 1;
+    border: 1px solid rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.menu-desc{
+    padding: 1rem;
+}
+
+.menu-desc button{
+    background: black;
+    border: white 1px solid;
+    color: white;
+
+}
+
+.menu-desc p:nth-child(3){
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.menu-picture img {
+    width: 10rem;
+    margin: 1rem;
+}
+
+.sidenav{
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    height: 80vh;
+    width: 30%;
+    top: 0;
+    right: 0;
+    transform: translateY(22%);
+    background: white;
+    color: black;
+    overflow-y: scroll;
+}
+
+.clear{
+    display: none;
+}
+
+.quantity{
+    width: 4rem;
+}
+
+.side-item, .total{
+    margin-left: 1rem;
+}
+
+.side-item h4{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.side-item button{
+    display: block;
+    background: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.side-item p{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.cart-balance{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(160%, -20%);
+    margin-right: 3rem;
+    color: white;
+}
+
+@media only screen and (max-width: 986px) {
+    .menu-container{
+        grid-template-columns: 1fr;
+    }
+    .menu-picture img{
+        width: 8rem;
+    }
+    .sidenav{
+        width: 100%;
+    }
+  }
